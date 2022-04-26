@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        inp1= ['1', '2', '3']
+        inp2= ['1', '2', '3', '4', '5']
+
+        const shifter= function (n, list){
+            if(n>0){ //desno
+                for(let i=0 ;i<n;i++) list.unshift(list.pop())
+            }else{ //levo
+                for(let i=n ;i<0;i++) {
+                    list.push(list.shift())
+                }
+            }
+            return list
+        }
+        console.log(shifter(2, inp1))
+        console.log(shifter(-3, inp2))
+
+    </script>
+
+</head>
+<body>
+<div>
+
+</div>
+</body>
+</html>
